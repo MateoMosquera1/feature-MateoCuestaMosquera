@@ -19,9 +19,28 @@
 
  next(); // Sin errores → continuar al controlador
  };
+ const validarPedido = (req, res, next) => {
+  const { clienteId, items, direccionEnvio } = req.body;
+  const errores = [];
+
+  if (!clienteId || clienteId.trim().length < 3)
+    errores.push('clienteId es requerido');
+
+  if (!Array.isArray(items) || items.length === 0)
+    errores.push('items debe ser un array con al menos un producto');
+
+  if (!direccionEnvio || direccionEnvio.trim().length < 5)
+    errores.push('direccionEnvio es requerida');
+
+  if (errores.length > 0)
+    return res.status(400).json({ mensaje: 'Datos inválidos', errores });
+
+  next();
+};
 
  // ── TAREA: Crea validarPedido, validarPersona y validarPago ──────────────
  // Sigue el mismo patrón: define qué campos son requeridos para cada entidad
  // y agrégalos al módulo.exports al final.
 
- module.exports = { validarProducto }; // TODO: agregar los demás validadores
+ module.exports = {  validarProducto, validarPedido  }; // TODO: agregar los demás validadores
+ 

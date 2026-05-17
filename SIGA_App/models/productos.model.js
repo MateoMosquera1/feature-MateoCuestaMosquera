@@ -6,21 +6,21 @@
  let productos = [
  {
  id: 'prod-001',
- nombre: 'Coquito Tropical 250ml',
- descripcion: 'Bebida artesanal de coco con maracuyá',
- precio: 4500, // En pesos colombianos (COP)
+ nombre: 'Airpods',
+ descripcion: 'Cancelación de ruido, ademas tienen un excelente sonido',
+ precio: 450000, // En pesos colombianos (COP)
  stock: 120, // Unidades disponibles
- categoria: 'bebidas',
+ categoria: 'Audifonos',
  activo: true,
  creadoEn: '2026-01-10T08:00:00.000Z'
  },
  {
  id: 'prod-002',
- nombre: 'Cocadas Tradicionales x12',
- descripcion: 'Cocadas artesanales estilo Tolu',
- precio: 8000,
+ nombre: 'Portatil Asus TUF Gaming',
+ descripcion: 'Excelente rendimiento para programadores',
+ precio: 8000000,
  stock: 50,
- categoria: 'confiteria',
+ categoria: 'Portatil',
  activo: true,
  creadoEn: '2026-01-12T09:30:00.000Z'
  }
