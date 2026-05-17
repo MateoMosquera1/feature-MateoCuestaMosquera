@@ -11,6 +11,8 @@
  app.use(express.json()); // Permite recibir JSON en el body
  app.use(express.urlencoded({ extended: true })); // Permite form-data
 
+ app.use(express.static('public'));
+
  // 3. Importar routers (uno por entidad)
  const productosRouter = require('./routes/productos.routes');
  const pedidosRouter = require('./routes/pedidos.routes');
