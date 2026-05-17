@@ -14,12 +14,15 @@
  // 3. Importar routers (uno por entidad)
  const productosRouter = require('./routes/productos.routes');
  const pedidosRouter = require('./routes/pedidos.routes');
+ const personasRouter = require('./routes/personas.routes');
+ const pagosRouter = require('./routes/pagos.routes');
  // TODO: importar pedidosRouter, personasRouter, pseRouter
 
  // 4. Montar los routers con su prefijo de URL
  app.use('/api/productos', productosRouter);
  app.use('/api/pedidos', pedidosRouter);
  app.use('/api/personas', personasRouter);
+ app.use('/api/pagos', pagosRouter);
  // TODO: montar los routers de pedidos, personas y pagos-pse
 
  // 5. Ruta raíz — saludo de la API
